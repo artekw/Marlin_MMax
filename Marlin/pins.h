@@ -543,7 +543,7 @@
 
 
 // uncomment one of the following lines for RAMPS v1.3 or v1.0, comment both for v1.2 or 1.1
-// #define RAMPS_V_1_3
+#define RAMPS_V_1_3
 // #define RAMPS_V_1_0
 
 
@@ -760,12 +760,13 @@
   #ifdef ULTRA_LCD
 
     #ifdef NEWPANEL
-      #define LCD_PINS_RS 16
-      #define LCD_PINS_ENABLE 17
-      #define LCD_PINS_D4 23
-      #define LCD_PINS_D5 25
-      #define LCD_PINS_D6 27
-      #define LCD_PINS_D7 29
+      #define LCD_PINS_RS 63 //16
+      #define LCD_PINS_ENABLE 65 //17
+      #define LCD_PINS_D4 59 //23
+      #define LCD_PINS_D5 64 //25
+      #define LCD_PINS_D6 44 //27
+      #define LCD_PINS_D7 66 //29
+      #define SDCARDDETECT 49
 
       #ifdef REPRAP_DISCOUNT_SMART_CONTROLLER
         #define BEEPER 37
@@ -801,9 +802,9 @@
           #define SHIFT_CLK 44 // shift register
           #define SHIFT_LD 42 // shift register
         #else
-          #define BTN_EN1 37
-          #define BTN_EN2 35
-          #define BTN_ENC 31  //the click
+          #define BTN_EN1 16
+          #define BTN_EN2 17
+          #define BTN_ENC 23  //the click
         #endif
 
         #ifdef G3D_PANEL
