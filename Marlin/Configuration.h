@@ -412,6 +412,11 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
     #define BACK_PROBE_BED_POSITION 170
     #define FRONT_PROBE_BED_POSITION 50
 
+	//#define ORIGIN_BACK_LEFT
+	//#define ORIGIN_FRONT_RIGHT
+	//#define ORIGIN_BACK_RIGHT
+	#define ORIGIN_FRONT_LEFT
+
      // set the number of grid points per dimension
      // I wouldn't see a reason to go above 3 (=9 probing points on the bed)
     #define AUTO_BED_LEVELING_GRID_POINTS 3
