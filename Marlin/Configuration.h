@@ -407,10 +407,10 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
     #define FRONT_PROBE_BED_POSITION 40
     */
     
-    #define LEFT_PROBE_BED_POSITION 50
-    #define RIGHT_PROBE_BED_POSITION 170
-    #define BACK_PROBE_BED_POSITION 170
-    #define FRONT_PROBE_BED_POSITION 50
+    #define LEFT_PROBE_BED_POSITION 55
+    #define RIGHT_PROBE_BED_POSITION 175
+    #define BACK_PROBE_BED_POSITION 175
+    #define FRONT_PROBE_BED_POSITION 55
     
     //#define ORIGIN_BACK_LEFT
     //#define ORIGIN_FRONT_RIGHT
