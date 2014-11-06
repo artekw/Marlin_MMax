@@ -154,7 +154,8 @@ void matrix_3x3::debug(char* title)
 	{
 		for(int j=0; j<3; j++)
 		{
-			SERIAL_PROTOCOL(matrix[count]);
+			//SERIAL_PROTOCOL(matrix[count]);
+			SERIAL_PROTOCOL_F(matrix[count],6); // http://3dprintboard.com/showthread.php?3105-Auto_Bed_Leveling-Enhanced-G29-command
 			SERIAL_PROTOCOLPGM(" ");
 		        count++;
 		}

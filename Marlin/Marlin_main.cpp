@@ -1218,6 +1218,10 @@ static void homeaxis(int axis) {
     axis_known_position[axis] = true;
 
     // Retract Servo endstop if enabled
+    #if defined (ENABLE_AUTO_BED_LEVELING) && (PROBE_SERVO_DEACTIVATION_DELAY > 0)
+      if (axis==Z_AXIS) do_blocking_move_relative(0, 0, Z_RAISE_BEFORE_PROBING);
+    #endif
+
     #ifdef SERVO_ENDSTOPS
       if (servo_endstops[axis] > -1) {
         servos[servo_endstops[axis]].write(servo_endstop_angles[axis * 2 + 1]);
@@ -1947,7 +1951,6 @@ int xx,yy;
     case 32: // undock the sled
         dock_sled(false);
         break;
-//#endif // Z_PROBE_SLED
 #endif // ENABLE_AUTO_BED_LEVELING
     case 90: // G90
       relative_mode = false;
